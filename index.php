@@ -8,12 +8,14 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     $text = "Don't wanna be an American idiot!
     Don't want a nation under the new media
     And can you hear the sound of hysteria?
+    The subliminal mind fuck America!
+    The subliminal mind fuck America!
     The subliminal mind fuck America!";
 
     $censore = "***";
  
     $censored_text = str_replace($_GET['bad_word'], $censore, $text);
-    // potevo anche mettere solo *** invece che creare una variabile $censore
+   
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +29,13 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 <body>
 
     <p>
-        <?php echo $text ?>
+        <?php echo $text ?> <br>
+        Lunghezza testo = <?php echo strlen($text) ?>
     </p>
 
     <p>
-        <?php echo $censored_text ?>
+        <?php echo $censored_text ?> <br>
+        Lunghezza testo = <?php echo strlen($censored_text) ?>
     </p>
 
 </body>
